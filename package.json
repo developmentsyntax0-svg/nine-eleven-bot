@@ -1,0 +1,22 @@
+{
+  "name": "9eleven-server-builder",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Discord.js v14 bot that rebuilds a FiveM community server from scratch",
+  "main": "src/index.js",
+  "bin": {
+    "9eleven-server-builder": "src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
