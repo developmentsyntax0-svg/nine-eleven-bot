@@ -3,18 +3,20 @@ import { logger } from '../lib/logger.js';
 import { sleep } from '../lib/queue.js';
 
 const PREFIX = '!';
-const MEMBER_ROLE_ID = '1573428233028767804';
+const MEMBER_ROLE_ID = '1573477786071605399';
 
 const COMMANDS = {
   عضو: 'member',
   member: 'member',
   رتبة: 'member',
+  توزيع: 'member',
+  roles: 'member',
 };
 
 function resolveMemberRole(guild, ctx) {
   return (
-    ctx?.roles?.get?.('member') ??
     guild.roles.cache.get(MEMBER_ROLE_ID) ??
+    ctx?.roles?.get?.('member') ??
     guild.roles.cache.find((role) => role.name === '🟢 عضو') ??
     null
   );
@@ -50,6 +52,7 @@ async function grantAll(message, ctx) {
   let added = 0;
   let failed = 0;
   let index = 0;
+  let lastEdit = Date.now();
 
   for (const member of targets.values()) {
     index += 1;
@@ -60,10 +63,11 @@ async function grantAll(message, ctx) {
       failed += 1;
       logger.debug(`member role failed (${member.user.tag}): ${err.message}`);
     }
-    if (index % 20 === 0) {
+    if (Date.now() - lastEdit > 5000) {
+      lastEdit = Date.now();
       await status.edit(`جاري التوزيع... ${index}/${targets.size} — نجح ${added}، فشل ${failed}`).catch(() => null);
     }
-    await sleep(120);
+    await sleep(60);
   }
 
   await status
