@@ -1,12 +1,12 @@
 {
-  "name": "9eleven-server-builder",
+  "name": "fivem-solutions-server-builder",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "description": "Discord.js v14 bot that rebuilds a FiveM community server from scratch",
   "main": "src/index.js",
   "bin": {
-    "9eleven-server-builder": "src/index.js"
+    "fivem-solutions-server-builder": "src/index.js"
   },
   "engines": {
     "node": ">=20"
