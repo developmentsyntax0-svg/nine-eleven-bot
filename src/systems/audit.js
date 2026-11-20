@@ -394,7 +394,7 @@ function welcomeMessage(member) {
 
   return [
     '```',
-    '          NINE ELEVEN STORE',
+    '          FIVEM SOLUTIONS',
     '```',
     `# مرحباً ${member.user.username}`,
     `> أنت العضو رقم **${joined}** في المتجر.`,
@@ -419,7 +419,7 @@ function welcomePanel(member, rulesChannel) {
 
   const content = [
     `# أهلاً ${member.user.username}`,
-    'Nine Eleven Store — متجر سكربتات وأنظمة FiveM',
+    'FiveM Solutions — متجر سكربتات وأنظمة FiveM',
     '',
     `> <@${member.id}> نورت المتجر، إنت العضو رقم **${joined}**.`,
     '',
@@ -439,7 +439,7 @@ function welcomePanel(member, rulesChannel) {
     '**2** — ممنوع السبام والروابط الخارجية',
     '**3** — ممنوع نشر أو بيع أي ملفات مسروقة',
     '',
-    '-# Nine Eleven Store • بالتوفيق',
+    '-# FiveM Solutions • بالتوفيق',
   ].join('\n');
 
   return { content, allowedMentions: { parse: [], users: [member.id] } };
