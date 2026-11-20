@@ -49,7 +49,7 @@ async function upsertChannel(guild, def, parent, overwrites, logger) {
     parent: parent.id,
     lockPermissions: false,
     permissionOverwrites: overwrites,
-    reason: 'nine-eleven-store channels',
+    reason: 'fivem-solutions channels',
   };
 
   if (def.type === ChannelType.GuildForum) {
@@ -90,7 +90,7 @@ export async function buildChannels(guild, roles, logger) {
     const payload = {
       name: cat.name,
       type: ChannelType.GuildCategory,
-      reason: 'nine-eleven-store categories',
+      reason: 'fivem-solutions categories',
     };
     if (overwrites.length > 0) payload.permissionOverwrites = overwrites;
 
