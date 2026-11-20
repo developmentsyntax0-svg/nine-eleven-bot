@@ -39,7 +39,7 @@ async function liftBotRole(guild, logger) {
 
   for (let target = highest; target > botRole.position; target -= 1) {
     try {
-      await botRole.setPosition(target, 'nine-eleven-store lift bot role for full wipe');
+      await botRole.setPosition(target, 'fivem-solutions lift bot role for full wipe');
       await guild.roles.fetch();
       logger.info(`تم رفع رتبة البوت إلى ${target}`);
       return;
@@ -62,7 +62,7 @@ async function purgeRoles(guild, logger) {
     doomed,
     async (role) => {
       try {
-        await role.delete('nine-eleven-store full role wipe');
+        await role.delete('fivem-solutions full role wipe');
         removed += 1;
       } catch (err) {
         logger.warn(`تعذر حذف الرتبة ${role.name}: ${err.message}`);
@@ -90,7 +90,7 @@ async function createRole(guild, def, logger) {
       colors: { primaryColor: def.color },
       hoist: def.hoist,
       permissions: def.perms,
-      reason: 'nine-eleven-store roles',
+      reason: 'fivem-solutions roles',
     });
   } catch (err) {
     logger.warn(`تعذر إنشاء الرتبة ${def.name}: ${err.message}`);
@@ -105,7 +105,7 @@ export async function buildRoles(guild, logger) {
   await purgeRoles(guild, logger);
 
   try {
-    await guild.roles.everyone.setPermissions(EVERYONE_PERMS, 'nine-eleven-store everyone');
+    await guild.roles.everyone.setPermissions(EVERYONE_PERMS, 'fivem-solutions everyone');
   } catch (err) {
     logger.warn(`تعذر تحديث صلاحيات @everyone: ${err.message}`);
   }
