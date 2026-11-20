@@ -1,4 +1,4 @@
-# 9 Eleven⁹¹¹ Server Builder
+# FiveM Solutions Server Builder
 
 بوت Discord.js v14 بيمسح السيرفر بالكامل ويعيد بناءه من الصفر كهيكل متجر FiveM احترافي: تصنيفات وقنوات منسقة، رتب وصلاحيات، نظام تذاكر بالأزرار والنماذج والـTranscript، و8 قنوات سجلات إدارية سرية.
 
