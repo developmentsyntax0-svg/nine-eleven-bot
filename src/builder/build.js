@@ -36,8 +36,8 @@ export async function buildServer(client, guildId) {
 
   const announcements = channels.get('announcements');
   const welcome = channels.get('welcome');
-  if (announcements) await guild.setPublicUpdatesChannel(announcements, 'nine-eleven-store updates').catch(() => null);
-  if (welcome) await guild.setSystemChannel(welcome, 'nine-eleven-store system').catch(() => null);
+  if (announcements) await guild.setPublicUpdatesChannel(announcements, 'fivem-solutions updates').catch(() => null);
+  if (welcome) await guild.setSystemChannel(welcome, 'fivem-solutions system').catch(() => null);
 
   logger.step('4/4 تجهيز القنوات');
   await runStage('المحتوى', () => buildContent(guild, channels, roles, logger));
@@ -53,7 +53,7 @@ export async function buildServer(client, guildId) {
   }
 
   const rules = channels.get('rules');
-  if (rules) await guild.setRulesChannel(rules, 'nine-eleven-store rules').catch(() => null);
+  if (rules) await guild.setRulesChannel(rules, 'fivem-solutions rules').catch(() => null);
 
   try {
     await client.rest.patch(`/guilds/${guildId}/welcome-screen`, {
