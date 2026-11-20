@@ -1,9 +1,9 @@
 export const theme = {
   brand: {
-    name: 'Nine Eleven Store',
+    name: 'FiveM Solutions',
     tagline: 'متجر FiveM — سكربتات وأنظمة جاهزة',
-    store: 'Nine Eleven Store',
-    site: 'https://nineeleven.store',
+    store: 'FiveM Solutions',
+    site: 'https://fivemsolutions.store',
   },
   colors: {
     primary: 0xc9a227,
@@ -56,6 +56,6 @@ export const theme = {
     flask: '🧪',
     tools: '🛠️',
   },
-  footer: 'Nine Eleven Store',
+  footer: 'FiveM Solutions',
   divider: '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬',
 };
