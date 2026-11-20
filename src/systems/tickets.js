@@ -31,7 +31,7 @@ const CATEGORIES = {
     description: 'استفسار عن سكربت أو نظام جاهز',
     title: 'طلب شراء منتج',
     questions: [
-      { id: 'server', label: 'اسم السيرفر وعدد اللاعبين', placeholder: 'مثال: Nine Eleven RP — 120 لاعب' },
+      { id: 'server', label: 'اسم السيرفر وعدد اللاعبين', placeholder: 'مثال: FiveM Solutions RP — 120 لاعب' },
       { id: 'framework', label: 'النظام (ESX / QBCore / CFX)', placeholder: 'ESX / QBCore / CFX' },
       { id: 'product', label: 'المنتج المطلوب', placeholder: 'مثال: MDT الشرطة' },
       { id: 'budget', label: 'الميزانية والوقت المتوقع', placeholder: 'الميزانية المتاحة والموعد المطلوب للتسليم' },
@@ -52,7 +52,7 @@ const CATEGORIES = {
   partnership: {
     label: 'شراكة',
     emoji: '🤝',
-    description: 'تعاون بين مجتمعك و Nine Eleven Store',
+    description: 'تعاون بين مجتمعك و FiveM Solutions',
     title: 'طلب شراكة',
     questions: [
       { id: 'brand', label: 'اسم العلامة أو المجتمع', placeholder: 'اسم المجتمع أو العلامة التجارية' },
