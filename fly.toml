@@ -1,0 +1,13 @@
+app = "fivem-solutions-bot"
+primary_region = "fra"
+
+[build]
+
+[env]
+  NODE_ENV = "production"
+  SKIP_LOCK = "true"
+  BUILD_ON_START = "false"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
