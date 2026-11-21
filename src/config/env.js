@@ -2,11 +2,9 @@ import 'dotenv/config';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(currentDir, '../..');
 const dataDir = path.join(rootDir, 'data');
-
 
 export const env = {
   token: process.env.DISCORD_TOKEN || process.env.TOKEN || '',
@@ -17,27 +15,21 @@ export const env = {
   dataDir,
 };
 
-
 export function assertEnv() {
   const missing = [];
 
-
-  if (!env.token) missing.push('DISCORD_TOKEN (توكن البوت)');
-  if (!env.guildId) missing.push('GUILD_ID (آيدي السيرفر)');
-
+  if (!env.token) missing.push('DISCORD_TOKEN');
+  if (!env.guildId) missing.push('GUILD_ID');
 
   if (missing.length > 0) {
-    throw new Error(
-      `متغيرات البيئة المفقودة: ${missing.join('، ')}. أضفها في ملف .env ثم أعد التشغيل.`,
-    );
+    throw new Error('Missing env vars: ' + missing.join(', '));
   }
-
 
   if (!/^\d{17,20}$/.test(env.guildId)) {
-    throw new Error(
-      `قيمة GUILD_ID غير صالحة: "${env.guildId}". يجب أن تكون أرقاماً فقط بطول 17 إلى 20 رقماً.`,
-    );
+    throw new Error('Invalid GUILD_ID: ' + env.guildId);
   }
 
-
   if (env.ownerId && !/^\d{17,20}$/.test(env.ownerId)) {
+    throw new Error('Invalid OWNER_ID: ' + env.ownerId);
+  }
+}
